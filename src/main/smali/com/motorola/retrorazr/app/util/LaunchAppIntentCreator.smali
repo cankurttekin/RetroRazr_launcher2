@@ -214,11 +214,14 @@
 
     new-instance p0, Landroid/content/Intent;
 
-    const-string v0, "android.intent.action.VIEW"
+    #const-string v0, "android.intent.action.VIEW"
+    const-string v0, "android.intent.action.SENDTO"
 
     invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "content://contacts/people/"
+    #const-string v0, "content://contacts/people/"
+    const-string v0, "mailto:"
+
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -346,7 +349,9 @@
 
     const-string v0, "android.intent.action.MAIN"
 
-    const-string v1, "android.intent.category.APP_MESSAGING"
+    #const-string v1, "android.intent.category.APP_MESSAGING"
+    #Changed: SMS app with Signal Messaging
+    const-string v1, "org.thoughtcrime.securesms"
 
     invoke-static {v0, v1}, Landroid/content/Intent;->makeMainSelectorActivity(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -406,7 +411,9 @@
 
     new-instance p0, Landroid/content/Intent;
 
-    const-string v0, "android.settings.SOUND_SETTINGS"
+    #const-string v0, "android.settings.SOUND_SETTINGS"
+    # Change left shortcut sound to camera
+    const-string v0, "android.media.action.IMAGE_CAPTURE"
 
     invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
