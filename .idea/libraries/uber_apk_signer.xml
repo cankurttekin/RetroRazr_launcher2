@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="uber-apk-signer">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/uber-apk-signer.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

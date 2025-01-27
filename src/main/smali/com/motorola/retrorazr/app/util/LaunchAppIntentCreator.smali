@@ -345,17 +345,17 @@
 .end method
 #
 .method public final createLaunchMessagingIntent2()Landroid/content/Intent;
-    .locals 2
+    .locals 1
 
-    const-string v0, "android.intent.action.MAIN"
+    new-instance v0, Landroid/content/Intent;
 
-    #const-string v1, "android.intent.category.APP_MESSAGING"
-    #Changed: SMS app with Signal Messaging
+    const-string v1, "android.intent.action.MAIN"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
     const-string v1, "org.thoughtcrime.securesms"
 
-    invoke-static {v0, v1}, Landroid/content/Intent;->makeMainSelectorActivity(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     return-object v0
 .end method
