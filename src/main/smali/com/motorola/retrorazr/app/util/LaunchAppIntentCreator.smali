@@ -208,6 +208,7 @@
 
     return-object p0
 .end method
+.locals 1
 
 .method public final createLaunchContactIntent()Landroid/content/Intent;
     .locals 1
@@ -218,10 +219,9 @@
 
     invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "content://contacts/people/"
+    #const-string v0, "content://contacts/people/"
 
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    #invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
