@@ -23,7 +23,7 @@ pkg install git bc gum p7zip timg xmlstarlet
 ```
 ##### Clone repo, enter directory, launch menu:
 ```
-git clone https://github.com/mhous33/RetroRazr_launcher2.git
+git clone https://github.com/cankurttekin/RetroRazr_launcher2.git
 cd RetroRazr_launcher2
 ./menu.sh
 ```
