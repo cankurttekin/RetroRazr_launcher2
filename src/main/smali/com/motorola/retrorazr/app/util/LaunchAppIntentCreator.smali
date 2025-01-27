@@ -409,15 +409,25 @@
 .method public final createLaunchSoundSettingsIntent()Landroid/content/Intent;
     .locals 1
 
-    new-instance p0, Landroid/content/Intent;
+    #new-instance p0, Landroid/content/Intent;
 
     #const-string v0, "android.settings.SOUND_SETTINGS"
     # Change left shortcut sound to camera
-    const-string v0, "android.media.action.IMAGE_CAPTURE"
+    #const-string v0, "android.media.action.IMAGE_CAPTURE"
 
-    invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    #invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    return-object p0
+    #return-object p0
+    .locals 1
+
+        const-string v0, "android.intent.action.MAIN"
+        const-string v1, "android.intent.category.APP_CAMERA"
+
+        invoke-static {v0, v1}, Landroid/content/Intent;->makeMainSelectorActivity(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+        move-result-object v0
+
+        return-object v0
 .end method
 
 .method public final createSendSmsIntent(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
