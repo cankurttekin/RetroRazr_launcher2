@@ -345,7 +345,7 @@
 .end method
 #
 .method public final createLaunchMessagingIntent2()Landroid/content/Intent;
-    .locals 1
+    .locals 2
 
     new-instance v0, Landroid/content/Intent;
 
