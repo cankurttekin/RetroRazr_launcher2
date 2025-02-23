@@ -404,19 +404,27 @@
     return-object p0
 .end method
 
+
+
 .method public final createLaunchSoundSettingsIntent()Landroid/content/Intent;
     .locals 1
 
     new-instance p0, Landroid/content/Intent;
 
-    #const-string v0, "android.settings.SOUND_SETTINGS"
-    # Change left shortcut sound to camera
-    const-string v0, "android.media.action.IMAGE_CAPTURE"
+    #const-string v0, "android.media.action.IMAGE_CAPTURE"
+    # Change to launch the full camera app instead
+    const-string v0, "android.intent.action.VIEW"
 
+    # Now, create an intent to launch the camera app
     invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    # Optional: set data type for camera app (usually to launch camera)
+    const-string v0, "image/*"  # This is a general MIME type, adjust if needed
+    invoke-virtual {p0, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)V
 
     return-object p0
 .end method
+
 
 .method public final createSendSmsIntent(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     .locals 1
