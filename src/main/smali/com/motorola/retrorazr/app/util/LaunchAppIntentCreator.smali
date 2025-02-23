@@ -407,20 +407,23 @@
 
 
 .method public final createLaunchSoundSettingsIntent()Landroid/content/Intent;
-    .locals 1
+    .locals 2
 
     new-instance p0, Landroid/content/Intent;
 
-    #const-string v0, "android.media.action.IMAGE_CAPTURE"
-    # Change to launch the full camera app instead
-    const-string v0, "android.intent.action.VIEW"
+    const-string v0, "android.intent.action.MAIN"
 
-    # Now, create an intent to launch the camera app
     invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    # Optional: set data type for camera app (usually to launch camera)
-    const-string v0, "image/*"  # This is a general MIME type, adjust if needed
-    invoke-virtual {p0, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)V
+    const-string v0, "android.intent.category.DEFAULT"
+
+    invoke-virtual {p0, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "com.android.camera"
+
+    const-string v0, "com.android.camera.Camera"
+
+    invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return-object p0
 .end method
