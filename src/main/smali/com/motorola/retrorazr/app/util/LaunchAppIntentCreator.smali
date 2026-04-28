@@ -51,7 +51,8 @@
         "createLaunchRecentIntent",
         #
         "createLaunchSettingsIntent",
-        "createLaunchSoundSettingsIntent",
+        #"createLaunchSoundSettingsIntent",
+        "createLaunchCameraIntent",
         "createSendSmsIntent",
         "body",
         "RetroRazr_release"
@@ -426,6 +427,18 @@
     invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return-object p0
+.end method
+
+.method public final createLaunchCameraIntent()Landroid/content/Intent;
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.media.action.STILL_IMAGE_CAMERA"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
 

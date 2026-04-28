@@ -597,7 +597,7 @@
 
     sget-object v0, Lcom/motorola/retrorazr/app/util/LaunchAppIntentCreator;->INSTANCE:Lcom/motorola/retrorazr/app/util/LaunchAppIntentCreator;
 
-    invoke-virtual {v0}, Lcom/motorola/retrorazr/app/util/LaunchAppIntentCreator;->createLaunchSoundSettingsIntent()Landroid/content/Intent;
+    invoke-virtual {v0}, Lcom/motorola/retrorazr/app/util/LaunchAppIntentCreator;->createLaunchCameraIntent()Landroid/content/Intent;
 
     move-result-object v0
 

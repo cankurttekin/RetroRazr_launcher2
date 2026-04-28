@@ -1157,6 +1157,7 @@
     <style name="KeypadButton" parent="@android:style/Widget.Button">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:hapticFeedbackEnabled">true</item>
+        <item name="android:soundEffectsEnabled">false</item>
     </style>
     <style name="KeypadTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:buttonStyle">@style/KeypadButton</item>
