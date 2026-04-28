@@ -344,19 +344,26 @@
 .end method
 #
 .method public final createLaunchMessagingIntent2()Landroid/content/Intent;
-    .locals 2
+    .locals 3
 
-    const-string v0, "android.intent.action.MAIN"
+    new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "android.intent.category.APP_MESSAGING"
-    #Changed: SMS app with Signal Messaging
-    #const-string v1, "org.thoughtcrime.securesms"
+    const-string v1, "android.intent.action.SEND"
 
-    invoke-static {v0, v1}, Landroid/content/Intent;->makeMainSelectorActivity(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    const-string v1, "text/plain"
 
-    return-object v0
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    # Create chooser
+    const-string v1, "Select messaging app"
+
+    invoke-static {v0, v1}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object v2
+
+    return-object v2
 .end method
 #
 .method public final createLaunchRazrActivityIntent(Landroid/content/Context;)Landroid/content/Intent;
