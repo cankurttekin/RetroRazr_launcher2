@@ -26,7 +26,8 @@
         "createLaunchBrowserIntent2",
         #
         "url",
-        "createLaunchBtSettingsIntent",
+        #"createLaunchBtSettingsIntent",
+        "createLaunchMapsIntent"
         "createLaunchContactIntent",
         #
         "createLaunchContactIntent2",
@@ -208,6 +209,26 @@
     invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     return-object p0
+.end method
+
+.method public final createLaunchMapsIntent()Landroid/content/Intent;
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.MAIN"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.category.LAUNCHER"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "com.google.android.apps.maps"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    return-object v0
 .end method
 
 .method public final createLaunchContactIntent()Landroid/content/Intent;
