@@ -310,7 +310,7 @@
     <dimen name="status_bar_height">90.0px</dimen>
     <!--<dimen name="status_bar_icon_margin">15.0px</dimen>-->
     <!---->
-    <dimen name="status_bar_icon_margin">4px</dimen>
+    <dimen name="status_bar_icon_margin">18.4873949579832px</dimen>
     <!---->
     <dimen name="subtitle_corner_radius">2.0dip</dimen>
     <dimen name="subtitle_outline_width">2.0dip</dimen>
@@ -327,8 +327,8 @@
     <!---->
     <dimen name="dialing_number">118.319327731092px</dimen>
     <dimen name="dialing_title">69.0196078431373px</dimen>
-    <dimen name="idle_main">0</dimen>
-    <dimen name="idle_main_border">0</dimen>
+    <dimen name="idle_main">69.0196078431373px</dimen>
+    <dimen name="idle_main_border">6.162464985994398</dimen>
     <dimen name="soft_key">69.0196078431373px</dimen>
     <!---->
 </resources>
