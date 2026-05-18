@@ -344,20 +344,29 @@
 .end method
 #
 .method public final createLaunchMessagingIntent2()Landroid/content/Intent;
-    .locals 2
+    .locals 3
 
     new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "android.intent.action.MAIN"
+    const-string v1, "android.intent.action.SENDTO"
+
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "android.intent.category.LAUNCHER"
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+    const-string v1, "smsto:"
 
-    const-string v1, "com.whatsapp"
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    return-object v0
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    const-string v1, "Select messaging app"
+
+    invoke-static {v0, v1}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object v2
+
+    return-object v2
 .end method
 #
 .method public final createLaunchRazrActivityIntent(Landroid/content/Context;)Landroid/content/Intent;
