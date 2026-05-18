@@ -27,7 +27,7 @@
         #
         "url",
         #"createLaunchBtSettingsIntent",
-        "createLaunchMapsIntent"
+        "createLaunchMapsIntent",
         "createLaunchContactIntent",
         #
         "createLaunchContactIntent2",
