@@ -30,7 +30,8 @@
         "createLaunchMapsIntent",
         "createLaunchContactIntent",
         #
-        "createLaunchContactIntent2",
+        #"createLaunchContactIntent2",
+        "createLaunchMusicPlayerIntent",
         #
         "createLaunchDialerIntent",
         "createLaunchDialerWithLastDialedNumberIntent",
@@ -258,6 +259,18 @@
     const-string v0, "android.intent.action.MAIN"
 
     const-string v1, "android.intent.category.APP_CONTACTS"
+
+    invoke-static {v0, v1}, Landroid/content/Intent;->makeMainSelectorActivity(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+.method public final createLaunchMusicPlayerIntent()Landroid/content/Intent;
+    .locals 2
+
+    const-string v0, "android.intent.action.MAIN"
+    const-string v1, "android.intent.category.APP_MUSIC"
 
     invoke-static {v0, v1}, Landroid/content/Intent;->makeMainSelectorActivity(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

@@ -701,8 +701,9 @@
 
     # invoke-virtual {v0}, Lcom/motorola/retrorazr/app/util/LaunchAppIntentCreator;->createLaunchContactIntent()Landroid/content/Intent;
     #
-    invoke-virtual {v0}, Lcom/motorola/retrorazr/app/util/LaunchAppIntentCreator;->createLaunchContactIntent2()Landroid/content/Intent;
+    #invoke-virtual {v0}, Lcom/motorola/retrorazr/app/util/LaunchAppIntentCreator;->createLaunchContactIntent2()Landroid/content/Intent;
     #
+    invoke-virtual {v0}, Lcom/motorola/retrorazr/app/util/LaunchAppIntentCreator;->createLaunchMusicPlayerIntent()Landroid/content/Intent;
 
     move-result-object v0
 
