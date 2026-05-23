@@ -74,7 +74,7 @@ function customize_ui {
     case $option_menu in
     Wallpaper)
         wallpaper=$(gum choose --header Wallpaper --selected "$wallpaper" \
-        Caribbean Food HigherPlane Moto Pacific Scarlet Silver madseason tool) ;;
+        Caribbean Food HigherPlane Moto Pacific Scarlet Silver madseason tool 10kdays crimson lateralus vivresavie) ;;
     Skin)
         skin=$(gum choose --header Skin --selected "$skin" \
         Moto Scarlet Silver) ;;
