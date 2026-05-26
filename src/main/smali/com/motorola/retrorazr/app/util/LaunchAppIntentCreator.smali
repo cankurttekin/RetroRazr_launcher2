@@ -267,14 +267,15 @@
     return-object v0
 .end method
 .method public final createLaunchMusicPlayerIntent()Landroid/content/Intent;
-    .locals 2
+    .locals 3
 
-    const-string v0, "android.intent.action.MAIN"
+    new-instance v0, Landroid/content/Intent;
+    const-string v1, "android.intent.action.MAIN"
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
     const-string v1, "android.intent.category.APP_MUSIC"
-
-    invoke-static {v0, v1}, Landroid/content/Intent;->makeMainSelectorActivity(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+    const/high16 v1, 0x10000000
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     return-object v0
 .end method
